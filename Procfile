@@ -1,1 +1,1 @@
-web: uvicorn app.api.assistant_api:app --host 0.0.0.0 --port $PORT & chainlit run main.py --host 0.0.0.0 --port 8005
+web: uvicorn assistant_api:app --host 0.0.0.0 --port $PORT & chainlit run main.py --host 0.0.0.0 --port 8003 --headless
