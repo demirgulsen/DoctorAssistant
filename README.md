@@ -7,7 +7,7 @@ This project is an LLM-based doctor assistant developed using LangChain, FastAPI
 It extracts symptoms, manages memory, and performs evaluations from user messages written in natural language (Turkish or English).
 
 Short Architecture Overview
->>> User → Chainlit → FastAPI → LangChain → LLM (Groq or Ollama)
+> User → Chainlit → FastAPI → LangChain → LLM (Groq or Ollama)
 
 ### ===== ⚙️ Main Features
 
@@ -63,7 +63,7 @@ First, create a virtual environment and install dependencies:
     >> pip install -r requirements.txt
 
 
->>> If you want to use Chainlit + Groq:
+> If you want to use Chainlit + Groq:
     Open two terminals to run the project:    
         1. Start the API in one terminal:
            --> uvicorn app.api.assistant_api:app --reload
@@ -74,7 +74,7 @@ First, create a virtual environment and install dependencies:
 
 # =========
 
->>> If you want to use Chainlit + Ollama:
+> If you want to use Chainlit + Ollama:
     Open three terminals to run the project and chat with the LLM:
         1. Start the Ollama service:
            --> ollama serve
@@ -100,7 +100,7 @@ Bu proje, LangChain, FastAPI, Chainlit' de Groq/ localde Ollama ve Chainlit kull
 Kullanıcının doğal dilde (Türkçe veya İngilizce) yazdığı mesajlardan semptom çıkarımı, hafıza yönetimi ve değerlendirme yapar.
 
 Mimarinin Kısa Özeti
-    >>> Kullanıcı → Chainlit → FastAPI → LangChain → LLM (Groq veya Ollama)
+    > Kullanıcı → Chainlit → FastAPI → LangChain → LLM (Groq veya Ollama)
 
 ### ===== ⚙️ Ana Özellikler
 
