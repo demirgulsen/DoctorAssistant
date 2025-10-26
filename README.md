@@ -7,7 +7,7 @@ This project is an LLM-based doctor assistant developed using LangChain, FastAPI
 It extracts symptoms, manages memory, and performs evaluations from user messages written in natural language (Turkish or English).
 
 Short Architecture Overview
-> User → Chainlit → FastAPI → LangChain → LLM (Groq or Ollama)
+    > User → Chainlit → FastAPI → LangChain → LLM (Groq or Ollama)
 
 ### ===== ⚙️ Main Features
 
