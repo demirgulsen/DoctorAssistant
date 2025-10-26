@@ -54,7 +54,7 @@ Short Architecture Overview
 While Ollama is the most suitable model for this project, for demo purposes and to allow everyone to try it, we used Groq via Chainlit.
 Additionally, to demonstrate real-world usage, Ollama can be run locally.
 
-Note: If you remove the Groq part from llm.py, you can continue to use Ollama + Chainlit locally. You only need to remove the Groq model.
+**Note:** If you remove the Groq part from llm.py, you can continue to use Ollama + Chainlit locally. You only need to remove the Groq model.
 
 ### ===== 🚀 Setup and Running
 First, create a virtual environment and install dependencies:
@@ -72,18 +72,21 @@ First, create a virtual environment and install dependencies:
 
         Note: Since FastAPI uses port 8000, Chainlit should run on a different port.
 
-# =========
+# =====
 
 **If you want to use Chainlit + Ollama:**
-    Open three terminals to run the project and chat with the LLM:
-        - 1. Start the Ollama service:
-           > ollama serve
-        - 2. Start the API:
-           > uvicorn app.api.assistant_api:app --reload
-        - 3. Run the client test script:
-           > python C:\...\DoctorAssistant\tests\client_test.py   (Replace with your own client_test.py absolute path. Right-click the file → Copy Path/Reference → Absolute Path.)
+
+Open three terminals to run the project and chat with the LLM:
+1. Start the Ollama service:
+   > ollama serve
+2. Start the API:
+   > uvicorn app.api.assistant_api:app --reload
+3. Run the client test script:
+   > python C:\...\DoctorAssistant\tests\client_test.py
+(Replace with your own client_test.py absolute path. Right-click the file → Copy Path/Reference → Absolute Path.)
     
-   **Note**: To use the Ollama model, Ollama must be installed on your machine, and the model defined in config.py (e.g., "qwen2.5:3b") must be downloaded.
+**Note**: To use the Ollama model, Ollama must be installed on your machine, and the model defined in config.py (e.g., "qwen2.5:3b") must be downloaded.
+    
     You can use any model; alternatives are listed in config.py. Just ensure it’s installed in Ollama before use.
 
 
