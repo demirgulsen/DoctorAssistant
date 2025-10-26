@@ -57,10 +57,12 @@ Additionally, to demonstrate real-world usage, Ollama can be run locally.
 **Note:** If you remove the Groq part from llm.py, you can continue to use Ollama + Chainlit locally. You only need to remove the Groq model.
 
 ### ===== 🚀 Setup and Running
-First, create a virtual environment and install dependencies:
->>> python -m venv venv
->>> venv\Scripts\activate
->>> pip install -r requirements.txt
+
+**First, create a virtual environment and install dependencies:**
+
+> python -m venv venv
+> venv\Scripts\activate
+> pip install -r requirements.txt
 
 
 **If you want to use Chainlit + Groq:**
@@ -107,7 +109,7 @@ Mimarinin Kısa Özeti
 ##### 🌐 Çok Dilli Destek (Türkçe / İngilizce)
     > Kullanıcının konuşma dili otomatik tespit edilir.
     > Dil konuşma ortasında değişse bile hafıza korunur.
-    > Dil tespiti ve kontrolleri için fonskiynlar yazılmıştır
+    > Dil tespiti ve kontrolleri için fonksiyonlar yazılmıştır
 
 ##### 🧠 Dinamik Hafıza Yönetimi
     > InMemoryChatMessageHistory kullanılarak önceki mesajlar saklanır.
@@ -150,10 +152,11 @@ Not: llm.py de groq kısmını kaldırırsanız ollama + chainlit yapısıyla lo
 
 ### ===== 🚀 Kurulum ve Çalıştırma
 
-Öncelikle snal ortamı ayarlayın ve bağımlılıkları yükleyin.
-    > python -m venv venv
-    > venv\Scripts\activate
-    > pip install -r requirements.txt
+**Öncelikle sanal ortamı ayarlayın ve bağımlılıkları yükleyin.**
+
+> python -m venv venv
+> venv\Scripts\activate
+> pip install -r requirements.txt
 
 **Projede Chainlit + Groq kullanmak isterseniz;**
 
