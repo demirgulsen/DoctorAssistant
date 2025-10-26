@@ -76,14 +76,12 @@ First, create a virtual environment and install dependencies:
 
 **If you want to use Chainlit + Ollama:**
     Open three terminals to run the project and chat with the LLM:
-        1. Start the Ollama service:
+        - 1. Start the Ollama service:
            > ollama serve
-        2. Start the API:
+        - 2. Start the API:
            > uvicorn app.api.assistant_api:app --reload
-        3. Run the client test script:
-           > python C:\...\DoctorAssistant\tests\client_test.py
-
-    (Replace with your own client_test.py absolute path. Right-click the file → Copy Path/Reference → Absolute Path.)
+        - 3. Run the client test script:
+           > python C:\...\DoctorAssistant\tests\client_test.py   (Replace with your own client_test.py absolute path. Right-click the file → Copy Path/Reference → Absolute Path.)
     
    **Note**: To use the Ollama model, Ollama must be installed on your machine, and the model defined in config.py (e.g., "qwen2.5:3b") must be downloaded.
     You can use any model; alternatives are listed in config.py. Just ensure it’s installed in Ollama before use.
