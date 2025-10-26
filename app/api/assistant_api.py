@@ -14,7 +14,7 @@ logger = logging.getLogger(__name__)
 app = FastAPI(title="Doctor Assistant API")
 
 # Chatbot endpoint
-@app.post("/chat", response_model=ChatResponse)
+@app.post("/api/chat", response_model=ChatResponse)
 async def chat_with_doctor(request: ChatRequest):
     """ Handle chat requests between the user and the doctor assistant.
     Parameter:
@@ -31,8 +31,13 @@ async def chat_with_doctor(request: ChatRequest):
         logger.error(f"Chat endpoint error: {str(e)}", exc_info=True)
         raise HTTPException(status_code=500, detail=str(e))
 
+import os
+current_dir = os.path.dirname(os.path.abspath(__file__))  # app/api/
+project_root = os.path.dirname(os.path.dirname(current_dir))  # project root
+main_path = os.path.join(project_root, "main.py")
 
-mount_chainlit(app=app, target="main.py", path="/")
+mount_chainlit(app=app, target=main_path, path="/")
+
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)
