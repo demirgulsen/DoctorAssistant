@@ -64,15 +64,14 @@ First, create a virtual environment and install dependencies:
 
 
 **If you want to use Chainlit + Groq:**
-    Open two terminals to run the project:    
-        1. Start the API in one terminal:
-           > uvicorn app.api.assistant_api:app --reload
-        2. Start Chainlit in another terminal (choose any free port, e.g., 8002):
-           > chainlit run main.py --port 8002 -wh
 
-        Note: Since FastAPI uses port 8000, Chainlit should run on a different port.
+Open two terminals to run the project:    
+1. Start the API in one terminal:
+   > uvicorn app.api.assistant_api:app --reload
+2. Start Chainlit in another terminal (choose any free port, e.g., 8002):
+   > chainlit run main.py --port 8002 -wh
 
-# =====
+**Note:** Since FastAPI uses port 8000, Chainlit should run on a different port.
 
 **If you want to use Chainlit + Ollama:**
 
@@ -157,28 +156,31 @@ Not: llm.py de groq kısmını kaldırırsanız ollama + chainlit yapısıyla lo
     > pip install -r requirements.txt
 
 **Projede Chainlit + Groq kullanmak isterseniz;**
-    Projeyi çalıştırmak için iki terminal açmalısınız
-        1. terminale api başlatma komutunu yazmalısınız
-        > uvicorn app.api.assistant_api:app --reload
-        2. terminale chainlit başlatma komutunu yazmalısınız (boş olan bir port girebilirsiniz, ben 8002 portunu kullandım)
-        > chainlit run main.py --port 8002 -wh
+
+Projeyi çalıştırmak için iki terminal açmalısınız
+        
+1. terminale api başlatma komutunu yazmalısınız
+   > uvicorn app.api.assistant_api:app --reload
+2. terminale chainlit başlatma komutunu yazmalısınız (boş olan bir port girebilirsiniz, ben 8002 portunu kullandım)
+   > chainlit run main.py --port 8002 -wh
 
    **Not**: fast api 8000 portunu kullandığı için chainlit için farklı bir port girmeliyiz
 
 =========
 
 **Eğer Chainlit + Ollama kullanmak isterseniz;**
-    Projeyi çalıştırmak ve llm ile sohbet etmek için üç terminal açmalısınız
-        1. terminale aşağıdaki ollama servisini başlatan kodu yazmalısınız
-        > ollama serve
-        2. terminale api başlatma komutunu yazmalısınız
-        > uvicorn app.api.assistant_api:app --reload
-        3. terminale client_test yolunu yazmalısınız ve artık çalıştırabilirsiniz
-        > python C:\...\DoctorAssistant\tests\client_test.py  (kendi client_test yolunuzu girin. Bunu yapmak için;
-        client_test dosyayınzın üzerine sağ tıklayın "Copy Path/Reference" ye tıklayın ve ardından "Absolute Path' e tıklamanız yeterli. Yolu kopyalacaktır.")
+
+Projeyi çalıştırmak ve llm ile sohbet etmek için üç terminal açmalısınız
+1. terminale aşağıdaki ollama servisini başlatan kodu yazmalısınız
+   > ollama serve
+2. terminale api başlatma komutunu yazmalısınız
+   > uvicorn app.api.assistant_api:app --reload
+3. terminale client_test yolunu yazmalısınız ve artık çalıştırabilirsiniz
+   > python C:\...\DoctorAssistant\tests\client_test.py  (kendi client_test yolunuzu girin. Bunu yapmak için;
+client_test dosyayınzın üzerine sağ tıklayın "Copy Path/Reference" ye tıklayın ve ardından "Absolute Path' e tıklamanız yeterli. Yolu kopyalacaktır.")
 
 **Not**: Ollama modelinin çalışması için bilgisayarınızda ollama'nın kurulu olması ve ollama içinde de config.py' de belirlediğimiz "qwen2.5:3b" modelinin yüklü olması gerekmektedir!
-         İstediğiniz herhangi bir model kullanabilirsiniz alternatif modelleri cofig.py' de belirttim. Sadece kullanmadan önce Ollama'da yüklü olduğundan emin olun!
+İstediğiniz herhangi bir model kullanabilirsiniz alternatif modelleri cofig.py' de belirttim. Sadece kullanmadan önce Ollama'da yüklü olduğundan emin olun!
 
 
 ### 🧑‍💻 Developer ( Geliştirici )
