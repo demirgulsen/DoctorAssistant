@@ -58,9 +58,9 @@ Additionally, to demonstrate real-world usage, Ollama can be run locally.
 
 ### ===== 🚀 Setup and Running
 First, create a virtual environment and install dependencies:
-    > python -m venv venv
-    > venv\Scripts\activate
-    > pip install -r requirements.txt
+>>> python -m venv venv
+>>> venv\Scripts\activate
+>>> pip install -r requirements.txt
 
 
 **If you want to use Chainlit + Groq:**
