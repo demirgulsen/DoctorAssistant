@@ -88,8 +88,7 @@ Open three terminals to run the project and chat with the LLM:
 (Replace with your own client_test.py absolute path. Right-click the file → Copy Path/Reference → Absolute Path.)
     
 **Note**: To use the Ollama model, Ollama must be installed on your machine, and the model defined in config.py (e.g., "qwen2.5:3b") must be downloaded.
-    
-    You can use any model; alternatives are listed in config.py. Just ensure it’s installed in Ollama before use.
+You can use any model; alternatives are listed in config.py. Just ensure it’s installed in Ollama before use.
 
 
 #### ===========  ******** =========  ******** ========= ******** =========
@@ -103,6 +102,7 @@ Bu proje, LangChain, FastAPI, Chainlit' de Groq/ localde Ollama ve Chainlit kull
 Kullanıcının doğal dilde (Türkçe veya İngilizce) yazdığı mesajlardan semptom çıkarımı, hafıza yönetimi ve değerlendirme yapar.
 
 Mimarinin Kısa Özeti
+    
     > Kullanıcı → Chainlit → FastAPI → LangChain → LLM (Groq veya Ollama)
 
 ### ===== ⚙️ Ana Özellikler
@@ -148,8 +148,8 @@ Mimarinin Kısa Özeti
 
 Bu projenin konusuna en uygun yöntem Ollama modeli kullanmaktır ama bu bir demo projesi olduğu için herkesin deneyebilmesi adına Chainlit ile Groq modelini kullandım.
 Ayrıca, böyle bir projenin gerçek hayatta nasıl kullanılabileceğini göstermek için de yerel makinede ollama kullandım.
-Not: llm.py de groq kısmını kaldırırsanız ollama + chainlit yapısıyla lokalde kullanmaya devam edebilirsiniz. Sadece Groq modelini kaldırmanız yeterli.
 
+**Not:** llm.py de groq kısmını kaldırırsanız ollama + chainlit yapısıyla lokalde kullanmaya devam edebilirsiniz. Sadece Groq modelini kaldırmanız yeterli.
 
 ### ===== 🚀 Kurulum ve Çalıştırma
 
@@ -169,8 +169,6 @@ Projeyi çalıştırmak için iki terminal açmalısınız
    > chainlit run main.py --port 8002 -wh
 
    **Not**: fast api 8000 portunu kullandığı için chainlit için farklı bir port girmeliyiz
-
-=========
 
 **Eğer Chainlit + Ollama kullanmak isterseniz;**
 
