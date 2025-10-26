@@ -24,7 +24,7 @@ class Settings(BaseSettings):
     OLLAMA_BASE_URL: str = "http://localhost:11434"
 
     # Backend API Configuration
-    API_URL: str = "http://127.0.0.1:8000/api/chat"   # FastAPI server address and endpoint
+    API_URL: str = os.getenv("API_URL", "http://localhost:8002/chat")   # FastAPI server address and endpoint
 
 
 settings = Settings()

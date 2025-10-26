@@ -6,7 +6,6 @@ from fastapi import FastAPI, HTTPException
 from app.pydantic_models import ChatRequest, ChatResponse
 from app.services.chat_service import process_chat
 from app.memory.memory_manager import get_memory_store
-from chainlit.utils import mount_chainlit
 
 logger = logging.getLogger(__name__)
 
@@ -14,7 +13,7 @@ logger = logging.getLogger(__name__)
 app = FastAPI(title="Doctor Assistant API")
 
 # Chatbot endpoint
-@app.post("/api/chat", response_model=ChatResponse)
+@app.post("/chat", response_model=ChatResponse)
 async def chat_with_doctor(request: ChatRequest):
     """ Handle chat requests between the user and the doctor assistant.
     Parameter:
@@ -30,14 +29,3 @@ async def chat_with_doctor(request: ChatRequest):
     except Exception as e:
         logger.error(f"Chat endpoint error: {str(e)}", exc_info=True)
         raise HTTPException(status_code=500, detail=str(e))
-
-import os
-current_dir = os.path.dirname(os.path.abspath(__file__))  # app/api/
-project_root = os.path.dirname(os.path.dirname(current_dir))  # project root
-main_path = os.path.join(project_root, "main.py")
-
-mount_chainlit(app=app, target=main_path, path="/")
-
-if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
