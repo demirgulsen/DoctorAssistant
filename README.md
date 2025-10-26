@@ -58,30 +58,30 @@ Note: If you remove the Groq part from llm.py, you can continue to use Ollama + 
 
 ### ===== 🚀 Setup and Running
 First, create a virtual environment and install dependencies:
-    >> python -m venv venv
-    >> venv\Scripts\activate
-    >> pip install -r requirements.txt
+    > python -m venv venv
+    > venv\Scripts\activate
+    > pip install -r requirements.txt
 
 
-> If you want to use Chainlit + Groq:
+**If you want to use Chainlit + Groq:**
     Open two terminals to run the project:    
         1. Start the API in one terminal:
-           --> uvicorn app.api.assistant_api:app --reload
+           > uvicorn app.api.assistant_api:app --reload
         2. Start Chainlit in another terminal (choose any free port, e.g., 8002):
-           --> chainlit run main.py --port 8002 -wh
+           > chainlit run main.py --port 8002 -wh
 
         Note: Since FastAPI uses port 8000, Chainlit should run on a different port.
 
 # =========
 
-> If you want to use Chainlit + Ollama:
+**If you want to use Chainlit + Ollama:**
     Open three terminals to run the project and chat with the LLM:
         1. Start the Ollama service:
-           --> ollama serve
+           > ollama serve
         2. Start the API:
-           --> uvicorn app.api.assistant_api:app --reload
+           > uvicorn app.api.assistant_api:app --reload
         3. Run the client test script:
-           --> python C:\...\DoctorAssistant\tests\client_test.py
+           > python C:\...\DoctorAssistant\tests\client_test.py
 
     (Replace with your own client_test.py absolute path. Right-click the file → Copy Path/Reference → Absolute Path.)
     
@@ -151,29 +151,29 @@ Not: llm.py de groq kısmını kaldırırsanız ollama + chainlit yapısıyla lo
 ### ===== 🚀 Kurulum ve Çalıştırma
 
 Öncelikle snal ortamı ayarlayın ve bağımlılıkları yükleyin.
-    >> python -m venv venv
-    >> venv\Scripts\activate
-    >> pip install -r requirements.txt
+    > python -m venv venv
+    > venv\Scripts\activate
+    > pip install -r requirements.txt
 
-Projede Chainlit + Groq kullanmak isterseniz;
+**Projede Chainlit + Groq kullanmak isterseniz;**
     Projeyi çalıştırmak için iki terminal açmalısınız
         1. terminale api başlatma komutunu yazmalısınız
-        --> uvicorn app.api.assistant_api:app --reload
+        > uvicorn app.api.assistant_api:app --reload
         2. terminale chainlit başlatma komutunu yazmalısınız (boş olan bir port girebilirsiniz, ben 8002 portunu kullandım)
-        --> chainlit run main.py --port 8002 -wh
+        > chainlit run main.py --port 8002 -wh
 
    **Not**: fast api 8000 portunu kullandığı için chainlit için farklı bir port girmeliyiz
 
 =========
 
-Eğer Chainlit + Ollama kullanmak isterseniz;
+**Eğer Chainlit + Ollama kullanmak isterseniz;**
     Projeyi çalıştırmak ve llm ile sohbet etmek için üç terminal açmalısınız
         1. terminale aşağıdaki ollama servisini başlatan kodu yazmalısınız
-        --> ollama serve
+        > ollama serve
         2. terminale api başlatma komutunu yazmalısınız
-        --> uvicorn app.api.assistant_api:app --reload
+        > uvicorn app.api.assistant_api:app --reload
         3. terminale client_test yolunu yazmalısınız ve artık çalıştırabilirsiniz
-        --> python C:\...\DoctorAssistant\tests\client_test.py  (kendi client_test yolunuzu girin. Bunu yapmak için;
+        > python C:\...\DoctorAssistant\tests\client_test.py  (kendi client_test yolunuzu girin. Bunu yapmak için;
         client_test dosyayınzın üzerine sağ tıklayın "Copy Path/Reference" ye tıklayın ve ardından "Absolute Path' e tıklamanız yeterli. Yolu kopyalacaktır.")
 
 **Not**: Ollama modelinin çalışması için bilgisayarınızda ollama'nın kurulu olması ve ollama içinde de config.py' de belirlediğimiz "qwen2.5:3b" modelinin yüklü olması gerekmektedir!
