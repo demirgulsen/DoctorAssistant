@@ -194,6 +194,7 @@ client_test dosyayınzın üzerine sağ tıklayın "Copy Path/Reference" ye tık
 
 ### ===== ▶️ Project Demo and Video Presentation ( Projenin Demo ve Video Sunumu )
 
-- Chainlit-App on render.com : [https://doctor-assistant-chainlit.onrender.com]
+- Live Demo on render.com : [https://doctor-assistant-chainlit.onrender.com]
+  
 - Youtube: [https://youtu.be/P3jrZfgo25w]
 
